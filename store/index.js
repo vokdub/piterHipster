@@ -7,7 +7,8 @@ Vue.use(Vuex)
 const store = () => new Vuex.Store({
 
   state: {
-    all: []
+    all: [],
+    goods: []
     // id: 0,
     // title: '',
     // description: '',
@@ -21,17 +22,8 @@ const store = () => new Vuex.Store({
     SET_CATEGORIES (state, categories) {
       state.all = categories;
     },
-    increment (state) {
-      state.counter++
-    },
-    saveName (state, message) {
-    	state.name = message
-    },
-    updateSurname (state, value) {
-    	state.surname = value
-    },
-    updateDate (state, value) {
-    	state.date = value
+    SET_GOODS (state, goods) {
+      state.goods = goods;
     }
   },
   actions: {
@@ -40,7 +32,15 @@ const store = () => new Vuex.Store({
       .get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
         context.commit('SET_CATEGORIES', response.data)
-        console.log('x '+response.data);
+      });
+    },
+    getGoods (context) {
+      axios
+      .get('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        context.commit('SET_GOODS', response.data)
+        
+      console.log(response.data);
       });
     }
   }
