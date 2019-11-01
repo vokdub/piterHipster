@@ -8,7 +8,8 @@ const store = () => new Vuex.Store({
 
   state: {
     all: [],
-    goods: []
+    goods: [],
+    description: {}
     // id: 0,
     // title: '',
     // description: '',
@@ -24,6 +25,9 @@ const store = () => new Vuex.Store({
     },
     SET_GOODS (state, goods) {
       state.goods = goods;
+    },
+    SET_DESCRIPTION(state, description){
+      state.description = description;
     }
   },
   actions: {
@@ -39,8 +43,13 @@ const store = () => new Vuex.Store({
       .get('https://jsonplaceholder.typicode.com/users')
       .then(response => {
         context.commit('SET_GOODS', response.data)
-        
-      console.log(response.data);
+      });
+    },
+    getDescription(context) {
+      axios
+      .get('https://jsonplaceholder.typicode.com/users')
+      .then(response => {
+        context.commit('SET_DESCRIPTION', response.data)
       });
     }
   }
