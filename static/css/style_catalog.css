@@ -1,0 +1,487 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.header {
+  box-sizing: border-box;
+  border-bottom: 1px darkgrey solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; }
+  .header .slide-win > img {
+    width: 37px;
+    height: 37px;
+    margin-left: 10px;
+    display: none; }
+  .header .basket > img {
+    height: 42px;
+    width: 42px;
+    box-sizing: border-box;
+    margin-right: 10px; }
+  .header .header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; }
+    .header .header__logo img {
+      width: 42px;
+      box-sizing: border-box;
+      margin-right: 10px;
+      z-index: -1; }
+    .header .header__logo h1 {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 42px;
+      text-align: center;
+      color: #000000; }
+    .header .header__logo a {
+      display: flex;
+      flex-wrap: nowrap;
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 42px;
+      text-align: center;
+      color: #000000;
+      text-decoration: none; }
+      .header .header__logo a p {
+        font-family: Roboto;
+        font-style: normal;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        color: #000000; }
+
+.left-categories {
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 70%;
+  display: flex;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-right: 1px darkgrey solid;
+  z-index: 4;
+  padding-top: 20px; }
+
+.fixed div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .fixed div a {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: auto;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    /* identical to box height */
+    margin-bottom: 15px;
+    margin-top: 15px; }
+
+.main123 {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: flex-end; }
+
+.main123 > div {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 80%; }
+
+.products {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  width: 100%; }
+
+div > .name {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  text-align: center;
+  color: #000000; }
+
+.merch {
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  width: 200px;
+  height: 200px;
+  background: darkgrey; }
+  .merch img {
+    width: 100%;
+    height: 100%; }
+  .merch .name_prod1 {
+    position: absolute;
+    display: block;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: mormal;
+    line-height: 14px;
+    text-align: center;
+    color: #000000; }
+  .merch .name_prod2 > strong {
+    position: absolute;
+    display: block;
+    bottom: -45px;
+    text-align: center;
+    width: 100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: mormal;
+    line-height: 14px;
+    text-align: center;
+    color: #000000; }
+
+.bottom {
+  min-height: 100%;
+  padding-bottom: 5px;
+  background: #F5F5F5; }
+
+.bottom__container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.bottom__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .bottom__logo span {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 21px;
+    text-align: center;
+    color: #000000; }
+
+.bottom__info {
+  display: none; }
+
+.bottom__tel {
+  padding-right: 25px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid black; }
+  .bottom__tel span {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px black solid; }
+  .bottom__tel img {
+    width: 120px;
+    height: 25px; }
+
+.bottom__tel > img {
+  margin-bottom: 5px; }
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contact-us img {
+    width: 30px;
+    height: 30px; }
+  .contact-us .insta {
+    height: 25px; }
+  .contact-us button {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 9px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: auto;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+    /* identical to box height */
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    vertical-align: text-bottom;
+    color: #000000; }
+  .contact-us button:hover {
+    cursor: pointer; }
+
+.contact-us > div {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center; }
+
+@media screen and (min-width: 955px) and (max-width: 1024px) {
+  .left-categories {
+    width: 225px; } }
+@media screen and (min-width: 501px) and (max-width: 954px) {
+  div > .name {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    text-align: center;
+    color: #000000; }
+
+  .main .show {
+    display: block;
+    position: absolute;
+    top: 70px; }
+
+  .left-categories {
+    width: 100%;
+    display: none;
+    height: 300%; }
+
+  body .header > .slide-win > img {
+    display: block; }
+
+  .main123 > div {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+
+  .products {
+    width: 100%;
+    justify-content: center; }
+    .products .merch {
+      margin: 0 30px 60px 30px;
+      width: 250px;
+      height: 250px; }
+
+  .bottom__info {
+    display: none; }
+
+  .bottom__container {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto; } }
+@media screen and (max-width: 500px) and (min-width: 401px) {
+  div > .name {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    text-align: center;
+    color: #000000; }
+
+  .header .header__logo > a {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none; }
+    .header .header__logo > a p {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+      text-align: center;
+      color: #000000; }
+
+  .main .show {
+    display: block;
+    position: absolute;
+    top: 70px; }
+
+  .left-categories {
+    width: 100%;
+    display: none;
+    height: 300%; }
+
+  body .header > .slide-win > img {
+    display: block; }
+
+  .main123 > div {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+
+  .products {
+    width: 100%;
+    justify-content: center; }
+    .products .merch {
+      margin: 0 10px 50px 10px;
+      width: 175px;
+      height: 175px; }
+
+  .bottom__info {
+    display: none; }
+
+  .bottom__container {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto; } }
+@media screen and (max-width: 400px) and (min-width: 330px) {
+  div > .name {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    text-align: center;
+    color: #000000; }
+
+  .header .header__logo > a {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none; }
+    .header .header__logo > a p {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+      text-align: center;
+      color: #000000; }
+
+  .main .show {
+    display: block;
+    position: absolute;
+    top: 70px; }
+
+  .left-categories {
+    width: 100%;
+    display: none;
+    height: 300%; }
+
+  body .header > .slide-win > img {
+    display: block; }
+
+  .main123 > div {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+
+  .products {
+    width: 100%;
+    justify-content: center; }
+    .products .merch {
+      margin: 0 10px 50px 10px;
+      width: 150px;
+      height: 150px; }
+
+  .bottom__info {
+    display: none; }
+
+  .bottom__container {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .bottom__tel {
+    padding-right: 15px;
+    margin-right: 15px; } }
+@media screen and (max-width: 329px) and (min-width: 240px) {
+  div > .name {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21px;
+    text-align: center;
+    color: #000000; }
+
+  .header .header__logo > a {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none; }
+    .header .header__logo > a p {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+      text-align: center;
+      color: #000000; }
+
+  .main .show {
+    display: block;
+    position: absolute;
+    top: 70px; }
+
+  .left-categories {
+    width: 100%;
+    display: none;
+    height: 300%; }
+
+  body .header > .slide-win > img {
+    display: block; }
+
+  .main123 > div {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+
+  .products {
+    width: 100%;
+    justify-content: center; }
+    .products .merch {
+      margin: 0 10px 50px 10px;
+      width: 120px;
+      height: 120px; }
+
+  .bottom__info {
+    display: none; }
+
+  .bottom__container {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .bottom__tel {
+    padding-right: 15px;
+    margin-right: 15px; } }

@@ -1,0 +1,257 @@
+$blockWidthHeader: 42px;//!!
+$fontStyle: Teko;
+$blockHeightHeader: 42px;//!!
+$firstSliderSize: 280px; //!!!!!
+$hieghForMainImage: 200px; //!!
+$sizeForSlideBattons: 68px;
+$positionForSlideBattons: $hieghForMainImage/2 - $sizeForSlideBattons/2;
+$spaceRight: 100px;
+$spaceAfterSlider: 170px;
+$heightTops: 300px;
+$leftCategoryBlock: 100%; //!!
+$fontStyle: Roboto;
+$bottom-space-right:auto; //!!
+$bottom-space-left:auto;//!!
+$hight-left-catigory:15px;//!!
+$size-for-icons:30px;//!!
+$bottom-logo-height: 25px;//!!
+$bottom-logo-width: 120px;//!!
+$sizeSmallsPic:10px;///!!!!
+
+@mixin font($size,$weight,$height,$color: #000000){
+        font-family: $fontStyle;
+        font-style: normal;
+        font-size: $size;
+        font-weight: $weight;
+        line-height: $height;
+        text-align: center;
+        color: $color;
+    } 
+    *{
+        padding: 0;
+        margin: 0;
+    }
+        .slide-win{
+            img{
+                width: $blockWidthHeader - 5px;
+                height: $blockHeightHeader - 5px;
+                margin-left: 10px;
+            }
+        }
+    .main .show{
+        display: block;
+        position: absolute;
+        top: 68px;
+    }
+    .left-categories{
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 300%;
+        display: none;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        
+    }
+    .fixed div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+            @include font(20px,auto,19px);
+            text-decoration: none;
+            /* identical to box height */
+            margin-bottom: $hight-left-catigory;
+            margin-top: $hight-left-catigory;
+        }
+    }
+    .header{
+        box-sizing: border-box;
+        border-bottom: 1px darkgrey solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .header__logo{
+            img{
+                margin-right: 10px;
+            }
+        }
+       a{
+            display: flex;
+            flex-wrap: nowrap;
+            @include font(18px,300,21px);
+            text-decoration: none;
+            p{
+                 @include font(18px,500,21px);
+                }
+        }
+    }
+    
+    .basket > img{
+        height: $blockHeightHeader;
+        width: $blockWidthHeader;
+        box-sizing: border-box;
+        margin-right: 10px;
+    }
+     .header__logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: $blockWidthHeader;
+            box-sizing: border-box;
+            
+            z-index: -1;
+         }
+    }
+//-----------------------------------------
+.all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.all > div{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .all__main img{
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .all__title-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .all__container-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    h2{
+            @include font(30px, 500, 35px,black);
+            display: flex;
+            white-space: nowrap;
+            justify-content: center;
+            margin-bottom: 10px;
+    }
+    .second-slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+        img{
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    }
+    .catigories__container {
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    }
+}
+//-----------------------------------------
+.bottom{
+        min-height: 100%;
+        padding-bottom: 5px;
+        background: #F5F5F5; 
+    }
+    .bottom__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: $firstSliderSize;
+        margin-left: $bottom-space-left;
+        margin-right: $bottom-space-right;
+    }
+    .bottom__logo{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        span{
+            @include font(18px,200,21px);
+        }
+    }
+    .bottom__info{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+        ul {
+            border: 0.3px solid #000000;
+            box-sizing: border-box;
+            list-style-type: none;
+            padding: 5px 15px;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    
+    .bottom__tel{
+        padding-right: 25px;
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 2px solid black;
+        span{
+            @include font(18px,500,21px);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-bottom: 1px black solid;
+        }
+        img{
+            width: $bottom-logo-width;
+            height: $bottom-logo-height;
+        }
+    }
+    .bottom__tel > img{
+        margin-bottom: 5px;
+    }
+    .contact-us{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: $size-for-icons;
+            height:$size-for-icons;
+        }
+        .insta{
+            height: $size-for-icons - 5px;
+        }
+        button{
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 9px;
+            @include font(14px,auto,28px);
+/* identical to box height */
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            vertical-align: text-bottom;
+            color: #000000;
+            
+        }
+         button:hover{
+            cursor: pointer;
+            
+        }
+    }
+    .contact-us > div{
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }

@@ -1,59 +1,49 @@
 <template>
 	<div>
-		<!-- <nuxt-link to="/catalog">catalog</nuxt-link> -->
-		<p  v-for="elem in goods"  v-bind:key="elem.id"  v-bind:Title="elem.Title">
-			<nuxt-link to="/card">
-				<h3>{{elem.Title}} </h3>
-			</nuxt-link>
-		</p>
-		
+		<NavAndCatalog></NavAndCatalog>		
 	</div>
 </template>
 
 <script>
+	import axios from 'axios'
+
+	// import TheHeader from '~/components/TheHeader.vue'
+	import NavAndCatalog from '~/components/NavAndCatalog.vue'
 	export default{
 		head: {
-    		title: 'Каталог'
-    	},
+			title: 'Каталог',
+
+			meta: [
+			{ charset: 'utf-8' },
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
+			],
+
+			link: [
+			{ rel: 'stylesheet', href: 'css/style_catalog.css' }
+			]
+		},
+		components: {
+			NavAndCatalog		
+		},
+		computed: {
+			testdata() {
+				return this.$store.state.categories;
+			}
+		},
+		created: function() {
+			// this.$store.dispatch('categories/firstLoad');
+			// this.$store.commit('categories/SET_DATA', [1,1,1])
+			axios.get('http://piter-hipster.enhancelab.ru/api/categories/')
+			.then((res) => {
+				this.$store.commit('categories/SET_DATA', res.data)
+			})
+		},
 		data() {
 			return{
-				goods: [
-        			{
-		                "id": 1,
-		                "Title": "Ушки корги",
-		                "Price": 2000.0,
-		                "photos": [
-		                    {
-		                        "Direction": "dsfgfgsdfgsf",
-		                        "alt": "picture"
-		                    }
-		                ]
-		             },
-		             {
-		                "id": 2,
-		                "Title": "Попка корги",
-		                "Price": 1000.0,
-		                "photos": [
-		                    {
-		                        "Direction": "dsfgfgsdfgsf",
-		                        "alt": "picture"
-		                    }
-		                ]
-		             },
-		             {
-		                "id": 3,
-		                "Title": "Ножка корги",
-		                "Price": 200.0,
-		                "photos": [
-		                    {
-		                        "Direction": "dsfgfgsdfgsf",
-		                        "alt": "picture"
-		                    }
-		                ]
-		             }
-		        ]
-					}
+			}
 		}
+
+		
 		// REGEN
 		// created: function() {
 		// 	this.$store.dispatch('getGoods');
@@ -67,5 +57,5 @@
 </script> 
 
 <style>
-	
+
 </style>
