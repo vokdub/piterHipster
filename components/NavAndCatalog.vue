@@ -4,15 +4,25 @@
 			<div class="left-categories" id="left-categories">
 				<nav class="fixed">
 					<div>
-						<a href="">Одежда с Петербургом</a>
+						<nuxt-link to="" class="">
+							Одежда с Петербургом
+						</nuxt-link>						
 						<hr align="centre" width="80" size="2" color="black">
-						<a href="">Одежда с писателями</a>
+						<nuxt-link to="" class="">
+							Одежда с писателями
+						</nuxt-link>						
 						<hr align="centre" width="80" size="2" color="black">
-						<a href="">Деревянные значки</a>
+						<nuxt-link to="" class="">
+							Деревянные значки
+						</nuxt-link>						
 						<hr align="centre" width="80" size="2" color="black">
-						<a href="">Печатная продукция</a>
+						<nuxt-link to="" class="">
+							Печатная продукция
+						</nuxt-link>						
 						<hr align="centre" width="80" size="2" color="black">
-						<a href="">Акции</a>
+						<nuxt-link to="x" class="">
+							Акции
+						</nuxt-link>
 					</div>
 				</nav>
 			</div>

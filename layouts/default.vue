@@ -2,24 +2,11 @@
   <div>
     <header class="header">
       <div class="slide-win"><img src="image/Burger.png"></div>
-      <div class="header__logo logo"><!-- <img src="image/photo_2019-10-30_20-50-35.jpg"> -->
+      <div class="header__logo logo">
+        <img src="image/photo_2019-10-30_20-50-35.jpg">
         <a href="index.html">PITER<p>HIPSTER</p></a>
       </div>
-      <a class="basket" href="basket.html"><img src="image/shopping109.png"></a>
-      <script>
-        const tmp = document.querySelector('.slide-win');
-        tmp.addEventListener('click', function() {
-          console.log('click!!!');
-          const sidebar = document.querySelector('.left-categories');
-          if(sidebar.classList.contains('show')) {
-            sidebar.classList.remove('show');
-          } else {
-            sidebar.classList.add('show');
-          }
-          console.log(sidebar);
-        })
-        console.log('test', tmp);
-      </script>
+      <a href="basket.html" class="basket"><img src="image/shopping109.png"></a>      
     </header>
     
     <nuxt />
@@ -51,19 +38,19 @@
       </div>
     </article>
     <script>
-        const tmp = document.querySelector('.slide-win');
-        tmp.addEventListener('click', function() {
-            console.log('click!!!');
-            const sidebar = document.querySelector('.left-categories');
-            if(sidebar.classList.contains('show')) {
-                sidebar.classList.remove('show');
-            } else {
-                sidebar.classList.add('show');
-            }
-            console.log(sidebar);
-        })
-        console.log('test', tmp);
-      </script>  
+      const tmp = document.querySelector('.slide-win');
+      tmp.addEventListener('click', function() {
+        console.log('click!!!');
+        const sidebar = document.querySelector('.left-categories');
+        if(sidebar.classList.contains('show')) {
+          sidebar.classList.remove('show');
+        } else {
+          sidebar.classList.add('show');
+        }
+        console.log(sidebar);
+      })
+      console.log('test', tmp);
+    </script>  
   </div>
 </template>
 
@@ -75,7 +62,7 @@ a{
   text-decoration: none;
 }
 button{
-  background: black;
+  /*background: black;  зачем это?*/
   color: white;
   border: none;
 }
