@@ -6,9 +6,13 @@
      </div>
      <div class="header__logo logo">
       <img src="/image/photo_2019-10-30_20-50-35.jpg">
-      <a href="index.html"><span>PITER</span><span>HIPSTER</span></a>
+      <nuxt-link to="/" class="">
+        <span>PITER</span><span>HIPSTER</span>
+      </nuxt-link>  
     </div>
-    <a href="basket.html" class="basket"><img src="/image/shopping109.svg"></a>
+    <nuxt-link to="/basket" class="basket">
+      <img src="/image/shopping109.svg">
+    </nuxt-link>
   </header>
 
   <nuxt />
@@ -17,14 +21,29 @@
     <div class="bottom__container">
       <div class="bottom__info">
         <ul>
-          <li><a href="#Brend">О бренде</a></li>
-          <li><a href="#Info">Инфо</a></li>
-          <li><a href="#Contacts">Контакты</a></li>
+
+          <li>
+            <nuxt-link to="#Brend" class="">
+              О бренде
+            </nuxt-link>
+          </li>
+
+          <li>
+            <nuxt-link to="#Info" class="">
+              Инфо
+            </nuxt-link>
+          </li>
+
+          <li>
+            <nuxt-link to="#Contacts" class="">
+              Контакты
+            </nuxt-link>
+          </li>
         </ul>
       </div>
       <div class="bottom__logo">
         <div class="bottom__tel">
-          <img src="/image/logo%20(1).png">
+          <img src="/image/logo%20(1).png">          
           <a href="tel:+1234567890">+79819819111</a>
         </div>
 

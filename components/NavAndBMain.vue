@@ -52,11 +52,21 @@
 					<div class="catigories">
 						<h2>Каталог товаров</h2>
 						<div class="catigories__container">
-							<a href="index_catalog.html" class="StPet"><img src="/image/category/piter.jpg"></a>
-							<a href="#" class="autors"><img src="/image/category/autors.jpg"></a>
-							<a href="#" class="broshi"><img src="/image/category/broshi.jpg"></a>
-							<a href="#" class="znachki"><img src="/image/category/derev.jpg"></a>
-							<a href="#" class="printed"><img src="/image/category/printed.jpg"></a>
+							<nuxt-link to="catalog" class="StPet">
+								<img src="/image/category/piter.jpg">
+							</nuxt-link>
+							<nuxt-link to="catalog/product" class="autors">
+								<img src="/image/category/autors.jpg">
+							</nuxt-link>
+							<nuxt-link to="catalog" class="broshi">
+								<img src="/image/category/broshi.jpg">
+							</nuxt-link>
+							<nuxt-link to="catalog" class="znachki">
+								<img src="/image/category/derev.jpg">
+							</nuxt-link>
+							<nuxt-link to="catalog" class="printed">
+								<img src="/image/category/printed.jpg">
+							</nuxt-link>
 						</div>
 					</div>
 				</section>

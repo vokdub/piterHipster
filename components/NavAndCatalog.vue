@@ -37,34 +37,41 @@
 			<article class="products">
 				<h1 class="name">ОДЕЖДА С ПЕТЕРБУРГОМ</h1>
 				<section class="products__merch1 merch">
-					<img src="/image/with_St.Petersburg/98S5Ux7r81c.jpg">
-					<div class="name_prod1 name_prod">
-						<p>футболка «With Love»</p>
-						<p><strong>1 190 Р</strong></p>
-					</div>
+					<nuxt-link to="catalog/product" class="">
+
+						<img src="/image/with_St.Petersburg/98S5Ux7r81c.jpg">
+						<div class="name_prod1 name_prod">
+							<p>футболка «With Love»</p>
+							<p><strong>1 190 Р</strong></p>
+						</div>
+					</nuxt-link>
 				</section>
 				<section class="products__merch2 merch">
-					<a href="index_product.html">
+					<nuxt-link to="catalog/product" class="">
 						<img src="/image/with_St.Petersburg/lLgoQpmdbz0.jpg">
 						<div class="name_prod2 name_prod">
 							<p>свитшот «Санкт-Петербург</p>
 							<p><strong>1 990 Р</strong></p>
 						</div>
-					</a>
+					</nuxt-link>
 				</section>
 				<section class="products__merch3 merch">
-					<img src="/image/with_St.Petersburg/oh1EiY9JBJ0.jpg">
-					<div class="name_prod3 name_prod">
-						<p>футболка «Санкт-Петербург»</p>
-						<p><strong>1 190 Р</strong></p>
-					</div>
+					<nuxt-link to="catalog/product" class=""> 
+						<img src="/image/with_St.Petersburg/oh1EiY9JBJ0.jpg">
+						<div class="name_prod3 name_prod">
+							<p>футболка «Санкт-Петербург»</p>
+							<p><strong>1 190 Р</strong></p>
+						</div>
+					</nuxt-link>
 				</section>
-				<section class="products__merch4 merch">
-					<img src="/image/with_St.Petersburg/vOFnKlvP_IM.jpg">
-					<div class="name_prod4 name_prod">
-						<p>свитшот «With Love»</p>
-						<p><strong>1 990 Р</strong></p>
-					</div>
+				<section class="products__merch4 merch">					
+					<nuxt-link to="catalog/product" class="">
+						<img src="/image/with_St.Petersburg/vOFnKlvP_IM.jpg">
+						<div class="name_prod4 name_prod">
+							<p>свитшот «With Love»</p>
+							<p><strong>1 990 Р</strong></p>
+						</div>
+					</nuxt-link>
 				</section>
 			</article>
 		</main>	

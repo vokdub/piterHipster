@@ -25,6 +25,7 @@
 		},
 		data() {
 			return{
+				totalPrice: 0
 			};
 		},
 	};
