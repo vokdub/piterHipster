@@ -1,24 +1,34 @@
 $space-between-products: 50px;
 $size-products: 200px;
 $marginLeft: 200px;
-$blockWidthHeader: 42px;//!!
-$fontStyle: Teko;
-$blockHeightHeader: 42px;//!!
+$blockWidthHeader: 40px;//!!
+$fontStyle: Roboto;
+$blockHeightHeader: 40px;//!!
 $firstSliderSize: 280px; //!!!!!
 $hieghForMainImage: 200px; //!!
 $spaceRight: 100px;
 $spaceAfterSlider: 170px;
-$heightTops: 300px;
-$leftCategoryBlock: 250px; //!!
+$heightBascetProductPC: 190px;
+$heightBascetProductMOBILE: 140px;
+$leftCategoryBlock: 275px; //!!
 $fontStyle: Roboto;
-$bottom-space-right:300px; //!!
-$bottom-space-left:100px;//!!
+$bottom-space-right:auto; //!!
+$bottom-space-left:auto;//!!
 $hight-left-catigory:15px;//!!
 $size-for-icons:30px;//!!
 $bottom-logo-height: 25px;//!!
 $bottom-logo-width: 120px;//!!
 $sizeSmallsPic: 20px;///!!!!
 $sizeButtonFinish: 180px;
+
+@font-face {
+    font-family: Roboto; /* Гарнитура шрифта */
+    src: url(../fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: Robotobold; /* Гарнитура шрифта */
+    src: url(../fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
+   }
 @mixin font($size,$weight,$height,$color: #000000){
         font-family: $fontStyle;
         font-style: normal;
@@ -27,52 +37,22 @@ $sizeButtonFinish: 180px;
         line-height: $height;
         text-align: center;
         color: $color;
-    } 
+    }
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/leftCategory.scss";
 *{
         padding: 0;
         margin: 0;
     }
-.header{
-        box-sizing: border-box;
-        border-bottom: 1px darkgrey solid;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        .slide-win > img{
-            width: $blockWidthHeader;
-            height: $blockWidthHeader;
-            box-sizing: border-box;
-            margin-left: 10px;
+//******************************************
+.header .slide-win >img{
             display: none;
         }
-        .basket > img{
-            height: $blockHeightHeader;
-            width: $blockWidthHeader;
-            box-sizing: border-box;
-            margin-right: 10px;
-        }
-        .header__logo{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            img{
-                width: $blockWidthHeader;
-                box-sizing: border-box;
-                z-index: -1;
-                margin-right: 20px;
-            }
-             a{
-            display: flex;
-            flex-wrap: nowrap;
-            @include font(36px,300,42px);
-            text-decoration: none;
-            p{
-                 @include font(36px,500,42px);
-                }
-        }
-        }
+.header {
+    a{
+        font-size: 36px;
+    }
 }
 .left-categories{
         position: fixed;
@@ -80,10 +60,8 @@ $sizeButtonFinish: 180px;
         width: $leftCategoryBlock;
         height: 70%;
         display: flex;
-        z-index: 3;
         justify-content: center;
-        align-items: center;
-        background-color: white;
+        align-items: flex-start;
         background-color: white;
         border-right: 1px darkgrey solid;
     }
@@ -91,53 +69,35 @@ $sizeButtonFinish: 180px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        justify-content: center;
         a{
             @include font(20px,auto,19px);
             text-decoration: none;
             /* identical to box height */
-            margin-bottom: $hight-left-catigory;
-            margin-top: $hight-left-catigory;
+            margin-bottom: $hight-left-catigory + 10px;
+            margin-top: $hight-left-catigory + 10px;
         }
     }
-//******************************************
 .main123{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 40px;
 }
+
 .content{
     width: 70%;
     display: flex;
     flex-direction: column;
     margin-right: 5%;
     .close_icon {
-        width: $sizeSmallsPic;
-        height: $sizeSmallsPic;
+        
         display: flex;
-        justify-content: center;
-        align-items: center;
         img{
-            width: 100%;
-            height: 100%;
+            width: $sizeSmallsPic;
+            height: $sizeSmallsPic;
         }
     }
-    .product_info{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-        width: 100%;
-        img{
-            max-height: $size-products;
-        }
-        p{
-            @include font(14px,normal,16px);
-        }
-        .price{
-            @include font(14px,500,16px);
-        }
-    }
+    
     .content__total{
         margin-top: 10px;
         width: 100%;
@@ -145,6 +105,7 @@ $sizeButtonFinish: 180px;
         justify-content: flex-start;
         align-items: flex-end;
         flex-direction: column;
+        position: relative;
         p{
             @include font(18px,500,21px);
         }
@@ -203,104 +164,95 @@ $sizeButtonFinish: 180px;
         }
     }
 }
+.product_info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .content__p{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 23px;
+            max-width: 250px;
+            text-transform: uppercase;
+        }
+        span{
+            text-transform: lowercase;
+        }
+    }
+}
+.product_info > img{
+        height: $heightBascetProductPC;
+        margin-bottom: 30px;
+    }
 .main .show{
         display: block;
-        position: absolute;
-        top: 70px;
+        position: fixed;
+        top: 61px;
+        height: 100%;
     }
+.content__promocod{
+    position: absolute;
+    left: 0;
+    top: 15px;
+}
 //******************************************
-.bottom{
-        min-height: 100%;
-        padding-bottom: 5px;
-        background: #F5F5F5; 
-    }
-    .bottom__container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    .bottom__logo{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        span{
-            @include font(18px,200,21px);
-        }
-    }
-    .bottom__info{
-        display: none;
-    }
-    
-    .bottom__tel{
-        padding-right: 25px;
-        margin-right: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-right: 2px solid black;
-        span{
-            @include font(18px,500,21px);
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-bottom: 1px black solid;
-        }
-        img{
-            width: $bottom-logo-width;
-            height: $bottom-logo-height;
-        }
-    }
-    .bottom__tel > img{
-        margin-bottom: 5px;
-    }
-    .contact-us{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        img{
-            width: $size-for-icons;
-            height:$size-for-icons;
-        }
-        .insta{
-            height: $size-for-icons - 5px;
-        }
-        button{
-            border: 1px solid #000000;
-            box-sizing: border-box;
-            border-radius: 9px;
-            @include font(14px,auto,28px);
-/* identical to box height */
-            width: 120px;
-            height: 30px;
-            text-align: center;
-            vertical-align: text-bottom;
-            color: #000000;
-            
-        }
-         button:hover{
-            cursor: pointer;
-            
-        }
-    }
-    .contact-us > div{
-        margin-bottom: 5px;
-        display: flex;
-        align-items: center;
-    }
 
-@media screen and (min-width:801px) and (max-width: 1024px){
+
+@media screen and (min-width:801px) and (max-width: 1240px){
     $leftCategoryBlock: 225px;
-    .left-categories{
+     .main .left-categories{
         width: $leftCategoryBlock;
+        div a{
+            font-size: 15px;
+            line-height: 18px;
+        }
     }
     .content{
     width: 65%;
     margin-right: 3%
     }
+    .product_info{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .content__p{
+        
+        p{
+            
+            font-size: 15px;
+            line-height: 18px;
+            max-width: 250px;
+            text-transform: uppercase;
+        }
+        span{
+            text-transform: lowercase;
+        }
+    }
+}
 }
 @media screen and (min-width:501px) and (max-width: 800px){
     $leftCategoryBlock: 225px;
     $firstSliderSize: 480px;
     $sizeButtonFinish: 450px;
+    .content__promocod{
+    display: none;
+    }
+    .header .slide-win >img{
+            display: block;
+        }
+    .product_info > img{
+        height: $heightBascetProductMOBILE;
+        margin-bottom: 20px;
+    }
     .left-categories{
         position: absolute;
         left: 0;
@@ -311,12 +263,6 @@ $sizeButtonFinish: 180px;
         text-align: center;
         background-color: white;
     }
-    body > .header .slide-win img{
-                display: block;
-                width: $blockWidthHeader - 5px;
-                height: $blockHeightHeader - 5px;
-                margin-left: 10px;
-            }
     .main123{
         display: flex;
         justify-content: center;
@@ -326,6 +272,17 @@ $sizeButtonFinish: 180px;
         width: 90%;
         padding-right: 5%;
         padding-left: 5%;
+    }
+    .product_info{
+        .content__p{
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 12px;
+                line-height: 14px;
+                width: 250px;
+            }
+        }
     }
     .content__total{
         align-items: center !important;
@@ -368,40 +325,30 @@ $sizeButtonFinish: 180px;
     $firstSliderSize: 380px;
     $sizeButtonFinish: 350px;
     $size-products: 140px;
-    .header .header__logo > img + .need{
-            display: flex;
-            flex-wrap: nowrap;
-            @include font(18px,300,21px);
-            text-decoration: none;
-            p{
-                 @include font(18px,500,21px);
-                }
+    .content__promocod{
+    display: none;
+    }
+    .header .slide-win >img{
+            display: block;
+        }
+    .product_info > img{
+        height: $heightBascetProductMOBILE;
+        margin-bottom: 20px;
+    }
+    .header {
+            a{
+            font-size: 25px;
+        }
     }
     .product_info{
-        display: flex;
-        position: relative;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center;
-        margin-bottom: 30px;
-        width: 100%;
-        height: $size-products;
-        img{
-            max-height: $size-products !important;
-            position: absolute;
-            
-            left: 0;
-        }
-        p{
-            @include font(14px,normal,16px);
-        }
-        .price{
-            @include font(14px,500,16px);
-        }
-        .close_icon{
-            position: absolute !important;
-            
-            right: 0 !important;
+        .content__p{
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 12px;
+                line-height: 14px;
+                width: 175px;
+            }
         }
     }
     .left-categories{
@@ -414,12 +361,7 @@ $sizeButtonFinish: 180px;
         text-align: center;
         background-color: white;
     }
-    body > .header .slide-win img{
-                display: block;
-                width: $blockWidthHeader - 5px;
-                height: $blockHeightHeader - 5px;
-                margin-left: 10px;
-            }
+    
     .main123{
         display: flex;
         justify-content: center;
@@ -464,7 +406,12 @@ $sizeButtonFinish: 180px;
             }
         }
     }
-        
+    .fixed div{
+        a{
+            margin-bottom: $hight-left-catigory + 20px;
+            margin-top: $hight-left-catigory + 20px;
+        }
+    }
 }
 
 
@@ -473,40 +420,30 @@ $sizeButtonFinish: 180px;
     $firstSliderSize: 380px;
     $sizeButtonFinish: 350px;
     $size-products: 140px;
-    .header .header__logo > img + .need{
-            display: flex;
-            flex-wrap: nowrap;
-            @include font(18px,300,21px);
-            text-decoration: none;
-            p{
-                 @include font(18px,500,21px);
-                }
+    .header {
+            a{
+            font-size: 20px;
+        }
+    }
+    .header .slide-win >img{
+            display: block;
+        }
+    .content__promocod{
+    display: none;
+    }
+    .product_info > img{
+        height: $heightBascetProductMOBILE;
+        margin-bottom: 20px;
     }
     .product_info{
-        display: flex;
-        position: relative;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center;
-        margin-bottom: 30px;
-        width: 100%;
-        height: $size-products;
-        img{
-            max-height: $size-products !important;
-            position: absolute;
-            
-            left: 0;
-        }
-        p{
-            @include font(14px,normal,16px);
-        }
-        .price{
-            @include font(14px,500,16px);
-        }
-        .close_icon{
-            position: absolute !important;
-            
-            right: 0 !important;
+        .content__p{
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 12px;
+                line-height: 14px;
+                width: 150px;
+            }
         }
     }
     .left-categories{
@@ -519,12 +456,7 @@ $sizeButtonFinish: 180px;
         text-align: center;
         background-color: white;
     }
-    body > .header .slide-win img{
-                display: block;
-                width: $blockWidthHeader - 5px;
-                height: $blockHeightHeader - 5px;
-                margin-left: 10px;
-            }
+    
     .main123{
         display: flex;
         justify-content: center;
@@ -567,6 +499,12 @@ $sizeButtonFinish: 180px;
                 width: $sizeButtonFinish !important;
                 @include font(14px,500,16px, black);
             }
+        }
+    }
+    .fixed div{
+        a{
+            margin-bottom: $hight-left-catigory + 12px;
+            margin-top: $hight-left-catigory + 12px;
         }
     }
         
@@ -576,40 +514,30 @@ $sizeButtonFinish: 180px;
     $firstSliderSize: 380px;
     $sizeButtonFinish: 350px;
     $size-products: 100px;
-    .header .header__logo > img + .need{
-            display: flex;
-            flex-wrap: nowrap;
-            @include font(18px,300,21px);
-            text-decoration: none;
-            p{
-                 @include font(18px,500,21px);
-                }
+    .header {
+            a{
+            font-size: 20px;
+        }
+    }
+    .header .slide-win >img{
+            display: block;
+        }
+    .content__promocod{
+    display: none;
+    }
+    .product_info > img{
+        height: $heightBascetProductMOBILE;
+        margin-bottom: 20px;
     }
     .product_info{
-        display: flex;
-        position: relative;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center;
-        margin-bottom: 30px;
-        width: 100%;
-        height: $size-products;
-        img{
-            max-height: $size-products !important;
-            position: absolute;
-            
-            left: 0;
-        }
-        p{
-            @include font(14px,normal,16px);
-        }
-        .price{
-            @include font(14px,500,16px);
-        }
-        .close_icon{
-            position: absolute !important;
-            
-            right: 0 !important;
+        .content__p{
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 10px;
+                line-height: 12px;
+                width: 125px;
+            }
         }
     }
     .left-categories{
@@ -622,12 +550,7 @@ $sizeButtonFinish: 180px;
         text-align: center;
         background-color: white;
     }
-    body > .header .slide-win img{
-                display: block;
-                width: $blockWidthHeader - 5px;
-                height: $blockHeightHeader - 5px;
-                margin-left: 10px;
-            }
+    
     .main123{
         display: flex;
         justify-content: center;
@@ -670,6 +593,12 @@ $sizeButtonFinish: 180px;
                 width: $sizeButtonFinish !important;
                 @include font(14px,500,16px, black);
             }
+        }
+    }
+    .fixed div{
+        a{
+            margin-bottom: $hight-left-catigory;
+            margin-top: $hight-left-catigory;
         }
     }
         

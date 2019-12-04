@@ -1,0 +1,45 @@
+.slide-win{
+            img{
+                width: $blockWidthHeader - 10px;
+                height: $blockHeightHeader - 10px;
+                margin-left: 10px;
+            }
+        }
+    .left-categories{
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 300%;
+        display: none;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        z-index: 3;
+    }
+    .fixed div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        a{
+            @include font(20px,auto,19px);
+            text-decoration: none;
+            text-transform: uppercase;
+            /* identical to box height */
+            margin-bottom: $hight-left-catigory + 12px;
+            margin-top: $hight-left-catigory + 12px;
+        }
+    }
+.show1{
+    z-index: 6 !important;
+    position: fixed !important;
+    width: 100% !important;
+    background-color: white;
+}
+.show2{
+    z-index: 99 !important;
+    position: fixed;
+    bottom: 10px;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+    

@@ -1,39 +1,56 @@
 <template>
-	<div>
-		<nuxt-link to="/catalog">catalog</nuxt-link>
-		<!-- <pre>		{{all}}	    </pre> -->
-		<p  v-for="elem in all"  v-bind:key="elem.id"  v-bind:title="elem.title">
-			<nuxt-link to="/catalog"> <h3>{{elem.Title}} </h3></nuxt-link>
-		</p> 
+	<div>		
+		<NavAndBMain></NavAndBMain>
 	</div>
 </template>
 
 <script>
+	import axios from 'axios'
+
+	// import TheHeader from '~/components/TheHeader.vue'
+	import NavAndBMain from '@/components/NavAndBMain.vue'
+	
 	export default{
 		head: {
-    		title: 'Домашнаяя страница'
-    	},
+			title: 'PiterHipster - Главная страница',
+
+			meta: [
+			{ charset: 'utf-8' },
+			{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
+			],
+
+			link: [
+			{ rel: 'stylesheet', href: '/css/styleV2.css' }
+			]
+		},
+		components: {
+			NavAndBMain		
+		},
 		data() {
 			return{
+				
 				all: [
-        	 {
-                 "id": 1,
-                 "Title": "Щеночки"
-             },
-             {
-                 "id": 2,
-                 "Title": "Котятки"
-             },
-             {
-                 "id": 3,
-                 "Title": "Овечки"
-             },
-             {
-                 "id": 4,
-                 "Title": "Бомжик"
-             }
-        ]
+				{
+					"id": 1,
+					"Title": "Щеночки"
+				},
+				{
+					"id": 2,
+					"Title": "Котятки"
+				},
+				{
+					"id": 3,
+					"Title": "Овечки"
+				},
+				{
+					"id": 4,
+					"Title": "Бомжик"
+				}
+				]
 			}
+		},
+		methods:{
+
 		}
 		//REGEN
 		// created: function() {

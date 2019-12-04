@@ -1,0 +1,38 @@
+.header{
+        box-sizing: border-box;
+        border-bottom: 1px darkgrey solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .header__logo{
+            img{
+                height: $blockHeightHeader + 20px;
+            }
+        }
+       a{
+            
+            @include font(18px,300,21px);
+            text-decoration: none;
+            span:last-child{
+                font-family: Robotobold;
+                font-weight: 500;
+                }
+        }
+        .slide-win > img{
+            display: block;
+            margin-left: 20px;
+        }
+    }
+    .basket > img{
+        height: $blockHeightHeader - 10px;
+        width: $blockWidthHeader - 10px;
+        box-sizing: border-box;
+        margin-right: 20px;
+    }
+     .header__logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }

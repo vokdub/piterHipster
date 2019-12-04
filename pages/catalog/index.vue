@@ -19,7 +19,7 @@
 			],
 
 			link: [
-			{ rel: 'stylesheet', href: 'css/style_catalog.css' }
+			{ rel: 'stylesheet', href: '/css/style_catalog.css' }
 			]
 		},
 		components: {
