@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!-- {{categories[2]}}  вывод категории-->
 		<article class="main">
 			<div class="left-categories" id="left-categories">
 				<nav class="fixed">
@@ -79,7 +80,7 @@
 	export default {
 
 		name: 'NavAndBMain',
-
+		props: ['categories'],
 		data() {
 			return {
 

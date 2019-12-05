@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<NavAndBBasket></NavAndBBasket>
+		cart
+		{{items}}
+		<NavAndCart :totalPrice = "totalPrice"></NavAndCart>
 	</div>
 </template>
 
@@ -8,7 +10,7 @@
 	import axios from 'axios'
 
 	// import TheHeader from '~/components/TheHeader.vue'
-	import NavAndBBasket from '@/components/NavAndBBasket.vue'
+	import NavAndCart from '@/components/NavAndCart.vue'
 	export default{
 		head: {
 			title: 'PiterHipster - корзина',
@@ -21,13 +23,25 @@
 			]
 		},
 		components: {
-			NavAndBBasket		
+			NavAndCart		
 		},
 		data() {
 			return{
-				totalPrice: 0
 			};
 		},
+		computed: {
+			items () {
+				return this.$store.state.cart.data;
+			},
+
+			totalPrice(){
+				let tPrice = 0;
+				for(var item of this.$store.state.cart.data){
+					tPrice += item;
+				}
+				return tPrice;
+			}
+		}
 	};
 </script>
 

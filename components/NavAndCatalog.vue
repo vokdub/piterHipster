@@ -75,21 +75,7 @@
 				</section>
 			</article>
 		</main>	
-
-		<!-- <article class="main123">
-			<div>
-				<p class="name">ОДЕЖДА С ПЕТЕРБУРГОМ</p>
-				<article class="products">
-					<div class="merch" v-for="category in categories" :key="category.id">
-						<img src="/image/with_St.Petersburg/98S5Ux7r81c.jpg">
-						<div class="name_prod1">
-							<p>{{category.title}}</p>
-							<p>1 190 ₽</p>
-						</div>
-					</div>
-				</article>
-			</div>
-		</article>  -->
+		</article>
 	</div>
 </template>
 
@@ -102,12 +88,7 @@
 			return {
 
 			};
-		},
-		computed: {
-			categories() {
-				return this.$store.state.categories.data.message.results;
-			}
-		},
+		}
 	};
 
 

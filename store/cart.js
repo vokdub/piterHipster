@@ -1,15 +1,10 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 import axios from 'axios'
 
-Vue.use(Vuex)
+export const state = () => ({
+    data: [10,22]
+});
 
-const store = () => new Vuex.Store({
-
-  state: {
-    cart: {} 
-  },
-  mutations: {
+export const mutations = {
     SET_ITEM (state, item) {
       if (item.id in state.cart){
         state.cart[item.id].count += 1;
@@ -32,22 +27,12 @@ const store = () => new Vuex.Store({
         console.log("error");
       }
     }
-  },
-  actions: {
+}
+export const actions = {
     setItem (context) {      
-        context.commit('SET_ITEM', context);
+      context.commit('SET_ITEM', context);
     },
     removeItem (context) {
-        context.commit('REMOVE_ITEM', context);
-    },
-    // getDescription(context) {
-    //   axios
-    //   .get('https://jsonplaceholder.typicode.com/users')
-    //   .then(response => {
-    //     context.commit('SET_DESCRIPTION', response.data)
-    //   });
-    // }
-  }
-})
-
-export default store
+      context.commit('REMOVE_ITEM', context);
+    }
+}

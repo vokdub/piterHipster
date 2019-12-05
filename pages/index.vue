@@ -1,7 +1,9 @@
 <template>
 	<div>		
-		<NavAndBMain></NavAndBMain>
-	</div>
+		<NavAndBMain :categories = "categories"></NavAndBMain>
+	}
+
+</div>
 </template>
 
 <script>
@@ -27,40 +29,20 @@
 			NavAndBMain		
 		},
 		data() {
-			return{
-				
-				all: [
-				{
-					"id": 1,
-					"Title": "Щеночки"
-				},
-				{
-					"id": 2,
-					"Title": "Котятки"
-				},
-				{
-					"id": 3,
-					"Title": "Овечки"
-				},
-				{
-					"id": 4,
-					"Title": "Бомжик"
-				}
-				]
+			return{		
 			}
 		},
 		methods:{
 
+		},		
+		created: function() {
+			this.$store.dispatch('categories/getCategories');
+		},		
+		computed: {
+			categories () {
+				return this.$store.state.categories.data;
+			}
 		}
-		//REGEN
-		// created: function() {
-		// 	this.$store.dispatch('getCategories');
-		// },
-		// computed: {
-		// 	all () {
-		// 		return this.$store.state.all;
-		// 	}
-		// }
 	}
 </script> 
 

@@ -10,7 +10,7 @@
         <span>PITER</span><span>HIPSTER</span>
       </nuxt-link>  
     </div>
-    <nuxt-link to="/basket" class="basket">
+    <nuxt-link to="/cart" class="basket">
       <img src="/image/shopping109.svg">
     </nuxt-link>
   </header>

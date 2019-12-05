@@ -63,7 +63,7 @@
 					</div>
 					<div class="content__finish">
 						<p><strong>Итого:</strong></p>
-						<p><strong>3180 Р</strong></p>
+						<p><strong>{{totalPrice}}</strong></p>
 					</div>
 					<div class="order">
 						<button>ОФОРМИТЬ ЗАКАЗ</button>
@@ -84,16 +84,14 @@
 </template>
 
 <script>
-export default {
-
-  name: 'NavAndBBasket',
-
-  data() {
-    return {
-
-    };
-  },
-};
+	export default {
+		name: 'NavAndCart',
+		data() {
+			return {
+			};
+		},
+		props: ['totalPrice'],
+	};
 </script>
 
 <style lang="css" scoped>

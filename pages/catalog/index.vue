@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<NavAndCatalog></NavAndCatalog>		
+		<div v-for="item in products">
+			{{item.title}}
+		</div>
+		<NavAndCatalog></NavAndCatalog>	
 	</div>
 </template>
 
@@ -25,21 +28,21 @@
 		components: {
 			NavAndCatalog		
 		},
-		computed: {
-			testdata() {
-				return this.$store.state.categories;
-			}
-		},
 		created: function() {
-			// this.$store.dispatch('categories/firstLoad');
+			this.$store.dispatch('catalog/getProducts');
 			// this.$store.commit('categories/SET_DATA', [1,1,1])
-			axios.get('http://piter-hipster.enhancelab.ru/api/categories/')
-			.then((res) => {
-				this.$store.commit('categories/SET_DATA', res.data)
-			})
+			// axios.get('http://piter-hipster.enhancelab.ru/api/categories/')
+			// .then((res) => {
+			// 	this.$store.commit('categories/SET_DATA', res.data)
+			// })
 		},
 		data() {
 			return{
+			}
+		},
+		computed: {
+			products() {
+				return this.$store.state.catalog.data;
 			}
 		}
 
