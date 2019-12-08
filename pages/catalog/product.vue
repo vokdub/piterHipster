@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<NavAndProduct></NavAndProduct>
+		{{product[0].title}}
+		<NavAndProduct 
+		v-on:myEvent="addToCart($event)"
+		:product = "product"></NavAndProduct>
 	</div>
 </template>
 
@@ -30,6 +33,21 @@
 			return{
 			};
 		},
+		created: function() {
+			this.$store.dispatch('catalog/getProducts');
+
+		},
+		methods: {
+			addToCart: function () {
+				this.$store.dispatch('cart/setItem', this.$store.state.catalog.data[0]);
+				console.log("emited");
+			}
+		},
+		computed: {
+			product() {
+				return this.$store.state.catalog.data;
+			}
+		}
 	};
 </script>
 

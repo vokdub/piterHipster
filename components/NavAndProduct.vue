@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{product[0].title}}
 		<article class="main">
 			<div class="left-categories" id="left-categories">
 				<nav class="fixed">
@@ -47,8 +48,8 @@
 				</section>
 				<section class="product__description">
 					<div class="product__name">
-						<p> Свитшот “Санкт-Петербург” </p>
-						<p>1 990 Р</p>
+						<p> {{product[0].title}} </p>
+						<p> {{product[0].price}} Р</p>
 					</div>
 					<div class="product__under-name">
 						<div class="sizeAndColor">
@@ -72,7 +73,7 @@
 							</div>
 						</div>
 						<div class="buyAndPrice">
-							<button href="#">В КОРЗИНУ</button>
+							<button v-on:click="throwEvent" href="#">В КОРЗИНУ</button>
 						</div>
 						<div class="product__description-text">
 							<ul>
@@ -107,8 +108,14 @@
 
 			};
 		},
+		props: ['product'],
 		head: {			   
 			
+		},
+		methods: {
+			throwEvent: function () {
+				this.$emit('myEvent');
+			}
 		},
 	};
 

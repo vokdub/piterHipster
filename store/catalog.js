@@ -16,8 +16,7 @@ export const actions = {
 	getProducts (context) {
 		return axios.get('http://piter-hipster.enhancelab.ru/api/products/')
 		.then(response => {			
-			console.log(response.data.data.message.results);
-			context.commit('SET_DATA', response.data.data.message.results);
+			context.commit('SET_DATA', response.data.message.results);
 		})
 	}
 }

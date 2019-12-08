@@ -37,7 +37,7 @@
 			<article class="products">
 				<h1 class="name">ОДЕЖДА С ПЕТЕРБУРГОМ</h1>
 				<section class="products__merch1 merch">
-					<nuxt-link to="catalog/product" class="">
+					<nuxt-link to="/catalog/product" class="">
 
 						<img src="/image/with_St.Petersburg/98S5Ux7r81c.jpg">
 						<div class="name_prod1 name_prod">
@@ -47,7 +47,7 @@
 					</nuxt-link>
 				</section>
 				<section class="products__merch2 merch">
-					<nuxt-link to="catalog/product" class="">
+					<nuxt-link to="/catalog/product" class="">
 						<img src="/image/with_St.Petersburg/lLgoQpmdbz0.jpg">
 						<div class="name_prod2 name_prod">
 							<p>свитшот «Санкт-Петербург</p>
@@ -56,7 +56,7 @@
 					</nuxt-link>
 				</section>
 				<section class="products__merch3 merch">
-					<nuxt-link to="catalog/product" class=""> 
+					<nuxt-link to="/catalog/product" class=""> 
 						<img src="/image/with_St.Petersburg/oh1EiY9JBJ0.jpg">
 						<div class="name_prod3 name_prod">
 							<p>футболка «Санкт-Петербург»</p>
@@ -65,7 +65,7 @@
 					</nuxt-link>
 				</section>
 				<section class="products__merch4 merch">					
-					<nuxt-link to="catalog/product" class="">
+					<nuxt-link to="/catalog/product" class="">
 						<img src="/image/with_St.Petersburg/vOFnKlvP_IM.jpg">
 						<div class="name_prod4 name_prod">
 							<p>свитшот «With Love»</p>

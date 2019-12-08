@@ -1,8 +1,6 @@
 <template>
 	<div>
-		cart
-		{{items}}
-		<NavAndCart :totalPrice = "totalPrice"></NavAndCart>
+		<NavAndCart :items = "items" :totalPrice = "totalPrice"></NavAndCart>
 	</div>
 </template>
 
@@ -31,13 +29,14 @@
 		},
 		computed: {
 			items () {
-				return this.$store.state.cart.data;
+				return this.$store.state.cart.data[0];
 			},
 
 			totalPrice(){
 				let tPrice = 0;
+				console.log(this.$store.state.cart.data);
 				for(var item of this.$store.state.cart.data){
-					tPrice += item;
+					tPrice += item.price;
 				}
 				return tPrice;
 			}

@@ -1,18 +1,21 @@
 import axios from 'axios'
 
 export const state = () => ({
-    data: [10,22]
+    data: []
 });
 
 export const mutations = {
     SET_ITEM (state, item) {
-      if (item.id in state.cart){
-        state.cart[item.id].count += 1;
-      }
-      else{
-        state.cart[item.id] = item;
-        state.cart[item.id].count = 1;
-      }
+      state.data.push(item)
+      console.log(item);
+      console.log("item");
+      // if (item.id in state.cart){
+      //   state.cart[item.id].count += 1;
+      // }
+      // else{
+      //   state.cart[item.id] = item;
+      //   state.cart[item.id].count = 1;
+      // }
     },
     REMOVE_ITEM (state, item) {
       if (item.id in state.cart){
@@ -29,8 +32,8 @@ export const mutations = {
     }
 }
 export const actions = {
-    setItem (context) {      
-      context.commit('SET_ITEM', context);
+    setItem (context, payload) {      
+      context.commit('SET_ITEM', payload);
     },
     removeItem (context) {
       context.commit('REMOVE_ITEM', context);
