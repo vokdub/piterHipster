@@ -14,7 +14,7 @@ export const actions = {
 	getCategories (context) {
 		return axios.get('http://piter-hipster.enhancelab.ru/api/categories/')
 		.then(response => {			
-			context.commit('SET_DATA', response.data.data.message.results)
+			context.commit('SET_DATA', response.data.message.results)
 		})
 	}
 }

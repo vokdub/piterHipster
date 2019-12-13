@@ -1,6 +1,5 @@
 <template>
 	<div>
-		{{product[0].title}}
 		<article class="main">
 			<div class="left-categories" id="left-categories">
 				<nav class="fixed">
@@ -33,19 +32,19 @@
 			</div>
 		</article> 
 		<main>
+			<article class="product__imgs">
+				<div class="product__main-photo">
+					<div class="product__slider" id="slider" ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)">
+						<img class="slider-photo" id="img" src="/image/tovar1/B2olOmYt3SI.jpg">
+						<img class="slider-photo" src="/image/tovar1/lLgoQpmdbz0.jpg">
+						<img class="slider-photo" src="/image/tovar1/QuEZuojmw-8.jpg">
+						<img class="slider-photo" src="/image/tovar1/VHnBTwoGJjU.jpg">
+					</div>
+				</div>
+				<div class="product__pointer">
+				</div>
+			</article>
 			<article class="product">
-				<section class="product__imgs">
-					<div class="product__main-photo">
-						<div class="product__slider" id="slider" ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)">
-							<img class="slider-photo" id="img" src="/image/tovar1/B2olOmYt3SI.jpg">
-							<img class="slider-photo" src="/image/tovar1/lLgoQpmdbz0.jpg">
-							<img class="slider-photo" src="/image/tovar1/QuEZuojmw-8.jpg">
-							<img class="slider-photo" src="/image/tovar1/VHnBTwoGJjU.jpg">
-						</div>
-					</div>
-					<div class="product__pointer">
-					</div>
-				</section>
 				<section class="product__description">
 					<div class="product__name">
 						<p> {{product[0].title}} </p>
@@ -54,7 +53,7 @@
 					<div class="product__under-name">
 						<div class="sizeAndColor">
 							<div class="sizeAndColor__size">
-								<span>Размер</span>
+								<p>Размер <span>Таблица размеров</span></p>
 								<div>
 									<div>S</div>
 									<div>M</div>
@@ -64,7 +63,7 @@
 								</div>
 							</div>
 							<div class="sizeAndColor__color">
-								<span>Цвет</span>
+								<p>Цвет</p>
 								<div>
 									<div class="color_1"></div>
 									<div class="color_2"></div>
@@ -95,6 +94,9 @@
 				</section>
 			</article>
 		</main>
+
+
+
 	</div>
 </template>
 

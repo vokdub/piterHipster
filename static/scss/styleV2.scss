@@ -17,6 +17,21 @@ $size-for-icons:30px;//!!
 $bottom-logo-height: 25px;//!!
 $bottom-logo-width: 120px;//!!
 $sizeSmallsPic:10px;///!!!!
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
 @font-face {
     font-family: Roboto; /* Гарнитура шрифта */
     src: url(../fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
@@ -29,6 +44,7 @@ $sizeSmallsPic:10px;///!!!!
     font-family: Robotolight; /* Гарнитура шрифта */
     src: url(../fonts/Robotolight.ttf); /* Путь к файлу со шрифтом */
    }
+
 @mixin font($size,$weight,$height,$color: #000000){
         font-family: $fontStyle;
         font-style: normal;

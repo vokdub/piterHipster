@@ -1,7 +1,6 @@
 <template>
 	<div>		
 		<NavAndBMain :categories = "categories"></NavAndBMain>
-	}
 
 </div>
 </template>

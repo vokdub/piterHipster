@@ -21,7 +21,7 @@
         flex-direction: column;
         align-items: center;
         a{
-            @include font(20px,auto,19px);
+            @include font(18px,auto,21px);
             text-decoration: none;
             text-transform: uppercase;
             /* identical to box height */

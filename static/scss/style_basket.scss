@@ -20,7 +20,33 @@ $bottom-logo-height: 25px;//!!
 $bottom-logo-width: 120px;//!!
 $sizeSmallsPic: 20px;///!!!!
 $sizeButtonFinish: 180px;
-
+::-webkit-input-placeholder{
+    text-align: center;
+}
+:-moz-placeholder{
+    text-align: center;
+}
+::-moz-placeholder{
+    text-align: center;
+}
+:-ms-input-placeholder{
+    text-align: center;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
 @font-face {
     font-family: Roboto; /* Гарнитура шрифта */
     src: url(../fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
@@ -28,6 +54,10 @@ $sizeButtonFinish: 180px;
 @font-face {
     font-family: Robotobold; /* Гарнитура шрифта */
     src: url(../fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
+   }
+@font-face {
+    font-family: Robotomedium; /* Гарнитура шрифта */
+    src: url(../fonts/Robotomedium.ttf); /* Путь к файлу со шрифтом */
    }
 @mixin font($size,$weight,$height,$color: #000000){
         font-family: $fontStyle;
@@ -54,6 +84,16 @@ $sizeButtonFinish: 180px;
         font-size: 36px;
     }
 }
+
+.header .header__logo{
+        margin-right: -210px;
+    }
+.finderAndBascet{
+    form{
+        display: flex;
+    }
+}
+
 .left-categories{
         position: fixed;
         left: 0;
@@ -107,7 +147,7 @@ $sizeButtonFinish: 180px;
         flex-direction: column;
         position: relative;
         p{
-            @include font(18px,500,21px);
+            @include font(12px,500,14px);
         }
         .content__sum{
             display: flex;
@@ -125,23 +165,24 @@ $sizeButtonFinish: 180px;
             width: 50%;
             margin-bottom: 20px;
             p{
-                @include font(24px,500,28px);
+                @include font(14px,500,16px);
             }
         }
         .order{
             width: 100%;
             display: flex;
             justify-content: flex-end;
-            button{
+            a{
                 display: flex;
-                padding: 5px 20px;
+                
                 background: black;
                 border: none;
                 justify-content: center;
+                align-items: center;
                 text-decoration: none;
                 width: $sizeButtonFinish;
-                height: $sizeButtonFinish / 4;
-                @include font(14px,500,16px, white);
+                height: $sizeButtonFinish / 7;
+                @include font(10px,500,12px, white);
                 margin-bottom: 15px;
             }
         }
@@ -150,16 +191,17 @@ $sizeButtonFinish: 180px;
             display: flex;
             justify-content: flex-end;
             text-decoration: none;
-            button{
+            div{
                 display: flex;
-                padding: 5px 20px;
+                
                 background: white;
                 justify-content: center;
+                align-items: center;
                 text-decoration: none;
-                border: 2px solid black;
+                border: 1px solid black;
                 width: $sizeButtonFinish;
-                height: $sizeButtonFinish / 4;
-                @include font(14px,500,16px, black);
+                height: $sizeButtonFinish / 7;
+                @include font(10px,500,12px, black);
             }
         }
     }
@@ -175,13 +217,16 @@ $sizeButtonFinish: 180px;
         justify-content: space-around;
         align-items: center;
         p{
-            font-family: Roboto;
+            font-family: Robotomedium;
             font-style: normal;
             font-weight: normal;
             font-size: 20px;
             line-height: 23px;
             max-width: 250px;
             text-transform: uppercase;
+        }
+        .roboto{
+            font-family: Roboto;
         }
         span{
             text-transform: lowercase;
@@ -202,6 +247,32 @@ $sizeButtonFinish: 180px;
     position: absolute;
     left: 0;
     top: 15px;
+    form{
+        display: flex;
+        flex-direction: row;
+    }
+    input{
+                width: 200px;
+                height: 30px;
+                margin-right: 20px;
+                background: white;
+                text-shadow: none;
+                box-shadow: none;
+                border-style: none;
+                border: 0.5px solid #000000;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+            }  
+        .style-btn{
+            display: block;
+            background: black;
+            height: 30px;
+            width: 60px;
+            border-style: none;
+            @include font(14px,normal,20px);
+            color: white;
+            }
 }
 //******************************************
 
@@ -245,6 +316,14 @@ $sizeButtonFinish: 180px;
     $sizeButtonFinish: 450px;
     .content__promocod{
     display: none;
+    }
+    .header .header__logo{
+        margin-right: 0;
+    }
+    .finderAndBascet{
+        form{
+            display: none;
+        }
     }
     .header .slide-win >img{
             display: block;
@@ -304,14 +383,14 @@ $sizeButtonFinish: 180px;
         }
         .order{
             justify-content: center !important;
-            button{
+            a{
                 width: $sizeButtonFinish !important;
                 @include font(14px,500,16px, white);
             }
         }
         .back{
             justify-content: center !important;
-            button{
+            div{
                 width: $sizeButtonFinish !important;
                 @include font(14px,500,16px, black);
             }
@@ -338,6 +417,14 @@ $sizeButtonFinish: 180px;
     .header {
             a{
             font-size: 25px;
+        }
+    }
+    .header .header__logo{
+        margin-right: 0;
+    }
+    .finderAndBascet{
+        form{
+            display: none;
         }
     }
     .product_info{
@@ -393,16 +480,16 @@ $sizeButtonFinish: 180px;
         }
         .order{
             justify-content: center !important;
-            button{
+            a{
                 width: $sizeButtonFinish !important;
-                @include font(14px,500,16px, white);
+                @include font(10px,500,12px, white);
             }
         }
         .back{
             justify-content: center !important;
-            button{
+            div{
                 width: $sizeButtonFinish !important;
-                @include font(14px,500,16px, black);
+                @include font(10px,500,12px, black);
             }
         }
     }
@@ -431,6 +518,14 @@ $sizeButtonFinish: 180px;
     .content__promocod{
     display: none;
     }
+    .header .header__logo{
+        margin-right: 0;
+    }
+    .finderAndBascet{
+        form{
+            display: none;
+        }
+    }
     .product_info > img{
         height: $heightBascetProductMOBILE;
         margin-bottom: 20px;
@@ -440,8 +535,8 @@ $sizeButtonFinish: 180px;
             flex-direction: column;
             justify-content: center;
             p{
-                font-size: 12px;
-                line-height: 14px;
+                font-size: 11px;
+                line-height: 13px;
                 width: 150px;
             }
         }
@@ -468,10 +563,10 @@ $sizeButtonFinish: 180px;
         padding-left: 5%;
         margin-right: 0;
     }
-    .content__total{
+    .content .content__total{
         align-items: center !important;
         p{
-            @include font(18px,500,21px);
+            @include font(12px,500,14px);
         }
         .content__sum{
             width: 100% !important;
@@ -483,21 +578,23 @@ $sizeButtonFinish: 180px;
             width: 100% !important;
             margin-bottom: 20px;
             p{
-                @include font(24px,500,28px);
+                @include font(14px,500,16px);
             }
         }
         .order{
             justify-content: center !important;
-            button{
+            a{
                 width: $sizeButtonFinish !important;
-                @include font(14px,500,16px, white);
+                @include font(10px,500,12px, white);
+                letter-spacing: 1px;
             }
         }
         .back{
             justify-content: center !important;
-            button{
+            div{
                 width: $sizeButtonFinish !important;
-                @include font(14px,500,16px, black);
+                @include font(10px,500,12px, black);
+                letter-spacing: 1px;
             }
         }
     }
@@ -528,6 +625,14 @@ $sizeButtonFinish: 180px;
     .product_info > img{
         height: $heightBascetProductMOBILE;
         margin-bottom: 20px;
+    }
+    .header .header__logo{
+        margin-right: 0;
+    }
+    .finderAndBascet{
+        form{
+            display: none;
+        }
     }
     .product_info{
         .content__p{
@@ -582,14 +687,14 @@ $sizeButtonFinish: 180px;
         }
         .order{
             justify-content: center !important;
-            button{
+            a{
                 width: $sizeButtonFinish !important;
                 @include font(14px,500,16px, white);
             }
         }
         .back{
             justify-content: center !important;
-            button{
+            div{
                 width: $sizeButtonFinish !important;
                 @include font(14px,500,16px, black);
             }
@@ -601,5 +706,4 @@ $sizeButtonFinish: 180px;
             margin-top: $hight-left-catigory;
         }
     }
-        
 }
