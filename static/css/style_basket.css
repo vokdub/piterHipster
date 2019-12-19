@@ -91,14 +91,15 @@
     display: flex;
     border: none;
     border-bottom: 1px solid black;
-    width: 150px;
+    width: 220px;
     height: 30px;
     text-decoration: none; }
   .finderAndBascet form .style-btn {
     background-image: url(../image/finder.png);
     height: 30px;
     width: 30px;
-    border: none; }
+    border: none;
+    margin-right: 5px; }
 
 .feedback {
   position: fixed;
@@ -430,7 +431,7 @@ form {
       width: 100%;
       display: flex;
       justify-content: flex-end; }
-      .content .content__total .order button {
+      .content .content__total .order a {
         display: flex;
         background: black;
         border: none;
@@ -536,12 +537,146 @@ form {
     color: #000000;
     color: white; }
 
-@media screen and (min-width: 801px) and (max-width: 1240px) {
-  .main .left-categories {
-    width: 225px; }
-    .main .left-categories div a {
-      font-size: 15px;
-      line-height: 18px; }
+@media screen and (min-width: 1240px) and (max-width: 4000px) {
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; }
+
+  body .finderAndBascet form {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
+
+  .header {
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 30px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
+
+  .finderAndBascet form {
+    position: absolute;
+    left: 325px; }
+
+  .finderAndBascet form {
+    display: flex;
+    justify-content: flex-start; }
+
+  .left-categories {
+    position: fixed !important;
+    left: 0;
+    top: 15px;
+    width: 275px;
+    height: 70%;
+    padding-top: 100px;
+    z-index: -1;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    border-right: 1px darkgrey solid; }
+
+  .fixed div {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .fixed div a {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 20px;
+      font-weight: auto;
+      line-height: 23px;
+      text-align: center;
+      color: #000000;
+      text-decoration: none;
+      /* identical to box height */
+      margin-bottom: 25px;
+      margin-top: 25px; } }
+@media screen and (min-width: 851px) and (max-width: 1240px) {
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; }
+
+  body .finderAndBascet form {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
+
+  .header {
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 30px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
+
+  .finderAndBascet form {
+    position: absolute;
+    left: 325px; }
+
+  .finderAndBascet form {
+    display: flex;
+    justify-content: flex-start; }
+
+  .left-categories {
+    position: fixed !important;
+    left: 0;
+    top: 15px;
+    width: 275px;
+    height: 70%;
+    padding-top: 100px;
+    z-index: -1;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    border-right: 1px darkgrey solid; }
+
+  .fixed div {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .fixed div a {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 20px;
+      font-weight: auto;
+      line-height: 23px;
+      text-align: center;
+      color: #000000;
+      text-decoration: none;
+      /* identical to box height */
+      margin-bottom: 25px;
+      margin-top: 25px; }
 
   .content {
     width: 65%;
@@ -559,7 +694,7 @@ form {
       text-transform: uppercase; }
     .product_info .content__p span {
       text-transform: lowercase; } }
-@media screen and (min-width: 501px) and (max-width: 800px) {
+@media screen and (min-width: 501px) and (max-width: 850px) {
   .content__promocod {
     display: none; }
 
@@ -631,7 +766,7 @@ form {
         color: #000000; }
     .content__total .order {
       justify-content: center !important; }
-      .content__total .order button {
+      .content__total .order a {
         width: 450px !important;
         font-family: Roboto;
         font-style: normal;
@@ -727,7 +862,7 @@ form {
         color: #000000; }
     .content__total .order {
       justify-content: center !important; }
-      .content__total .order button {
+      .content__total .order a {
         width: 350px !important;
         font-family: Roboto;
         font-style: normal;
@@ -827,7 +962,7 @@ form {
         color: #000000; }
     .content .content__total .order {
       justify-content: center !important; }
-      .content .content__total .order button {
+      .content .content__total .order a {
         width: 350px !important;
         font-family: Roboto;
         font-style: normal;
@@ -929,7 +1064,7 @@ form {
         color: #000000; }
     .content__total .order {
       justify-content: center !important; }
-      .content__total .order button {
+      .content__total .order a {
         width: 350px !important;
         font-family: Roboto;
         font-style: normal;

@@ -35,15 +35,15 @@ $sqareSize:20px;
 }
 @font-face {
     font-family: Roboto; /* Гарнитура шрифта */
-    src: url(../fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Robotobold; /* Гарнитура шрифта */
-    src: url(../fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Robotomedium; /* Гарнитура шрифта */
-    src: url(../fonts/Robotomedium.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Robotomedium.ttf); /* Путь к файлу со шрифтом */
    }
 @mixin font($size,$weight,$height,$color: #000000,$center: center){
         font-family: $fontStyle;
@@ -538,24 +538,48 @@ $bottom-logo-height: 25px;//!!
 $bottom-logo-width: 120px;//!!
 $sizeSmallsPic: 20px;///!!!!
 $sizeButtonFinish: 180px;
-    
-    .header .header__logo{
-        margin-right: -210px;
+    .feedback__form{
+        width: 360px;
+        height: 260px;
+        left: 50%;
+        margin-left: -12.5%;
     }
-    .header{        
-    margin-bottom: 20px;
-}
-    .finderAndBascet{
-        form{
-            display: flex;
+    body .finderAndBascet form{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    article > h1{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+    .header{
+        margin-bottom: 20px;
+        height: 100px;
+        border-bottom: none;
+        position: relative;
+        a{
+            font-size: 26px;
+            line-height: 35px;
         }
     }
-    .header .header__logo{
-        margin-right: -210px;
+    .header__logo{
+        position: absolute;
+        left: 10px;
+        img{
+            margin-right: 10px;
+        }
     }
     .finderAndBascet{
         form{
-        display: flex ;
+            position: absolute;
+            left: $leftCategoryBlock + 50px;
+        }
+    }
+    .finderAndBascet{
+        form{
+        display: flex;
+        justify-content: flex-start;
         }
     }
     main{
@@ -754,29 +778,33 @@ $sizeButtonFinish: 180px;
             display: none !important;
         }
     .left-categories{
-        position: fixed;
+        position: fixed!important;
         left: 0;
+        top: 15px;
         width: $leftCategoryBlock;
         height: 70%;
-        display: flex;
+        padding-top: 100px;
+        z-index: -1;
+        display: flex!important;
         justify-content: center;
         align-items: flex-start;
         background-color: white;
         border-right: 1px darkgrey solid;
     }
     .fixed div{
-        display: flex;
+        display: flex!important;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         a{
-            @include font(20px,auto,19px);
+            @include font(20px,auto,23px);
             text-decoration: none;
             /* identical to box height */
             margin-bottom: $hight-left-catigory + 10px;
             margin-top: $hight-left-catigory + 10px;
         }
     }
+    
 }
 
 @media screen and (min-width:1025px) and (max-width:1374px){
@@ -803,24 +831,48 @@ $bottom-logo-height: 25px;//!!
 $bottom-logo-width: 120px;//!!
 $sizeSmallsPic: 20px;///!!!!
 $sizeButtonFinish: 180px;
-    
-    .header .header__logo{
-        margin-right: -210px;
+    .feedback__form{
+        width: 360px;
+        height: 260px;
+        left: 50%;
+        margin-left: -12.5%;
     }
-    .header{        
-    margin-bottom: 20px;
-}
-    .finderAndBascet{
-        form{
-            display: flex;
+    body .finderAndBascet form{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    article > h1{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+    .header{
+        margin-bottom: 20px;
+        height: 100px;
+        border-bottom: none;
+        position: relative;
+        a{
+            font-size: 30px;
+            line-height: 35px;
         }
     }
-    .header .header__logo{
-        margin-right: -210px;
+    .header__logo{
+        position: absolute;
+        left: 10px;
+        img{
+            margin-right: 10px;
+        }
     }
     .finderAndBascet{
         form{
-        display: flex ;
+            position: absolute;
+            left: $leftCategoryBlock + 50px;
+        }
+    }
+    .finderAndBascet{
+        form{
+        display: flex;
+        justify-content: flex-start;
         }
     }
     main{
@@ -1018,23 +1070,26 @@ $sizeButtonFinish: 180px;
             display: none !important;
         }
     .left-categories{
-        position: fixed;
+        position: fixed!important;
         left: 0;
+        top: 15px;
         width: $leftCategoryBlock;
         height: 70%;
-        display: flex;
+        padding-top: 100px;
+        z-index: -1;
+        display: flex!important;
         justify-content: center;
         align-items: flex-start;
         background-color: white;
         border-right: 1px darkgrey solid;
     }
     .fixed div{
-        display: flex;
+        display: flex!important;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         a{
-            @include font(20px,auto,19px);
+            @include font(20px,auto,23px);
             text-decoration: none;
             /* identical to box height */
             margin-bottom: $hight-left-catigory + 10px;
@@ -1067,24 +1122,48 @@ $bottom-logo-height: 25px;//!!
 $bottom-logo-width: 120px;//!!
 $sizeSmallsPic: 20px;///!!!!
 $sizeButtonFinish: 180px;
-    
-    .header .header__logo{
-        margin-right: -210px;
+    .feedback__form{
+        width: 360px;
+        height: 260px;
+        left: 50%;
+        margin-left: -12.5%;
     }
-    .header{        
-    margin-bottom: 20px;
-}
-    .finderAndBascet{
-        form{
-            display: flex;
+    body .finderAndBascet form{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    article > h1{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+    .header{
+        margin-bottom: 20px;
+        height: 100px;
+        border-bottom: none;
+        position: relative;
+        a{
+            font-size: 30px;
+            line-height: 35px;
         }
     }
-    .header .header__logo{
-        margin-right: -210px;
+    .header__logo{
+        position: absolute;
+        left: 10px;
+        img{
+            margin-right: 10px;
+        }
     }
     .finderAndBascet{
         form{
-        display: flex ;
+            position: absolute;
+            left: $leftCategoryBlock + 50px;
+        }
+    }
+    .finderAndBascet{
+        form{
+        display: flex;
+        justify-content: flex-start;
         }
     }
     main{
@@ -1282,23 +1361,26 @@ $sizeButtonFinish: 180px;
             display: none !important;
         }
     .left-categories{
-        position: fixed;
+        position: fixed!important;
         left: 0;
+        top: 15px;
         width: $leftCategoryBlock;
         height: 70%;
-        display: flex;
+        padding-top: 100px;
+        z-index: -1;
+        display: flex!important;
         justify-content: center;
         align-items: flex-start;
         background-color: white;
         border-right: 1px darkgrey solid;
     }
     .fixed div{
-        display: flex;
+        display: flex!important;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         a{
-            @include font(20px,auto,19px);
+            @include font(20px,auto,23px);
             text-decoration: none;
             /* identical to box height */
             margin-bottom: $hight-left-catigory + 10px;

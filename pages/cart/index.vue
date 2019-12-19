@@ -17,7 +17,7 @@
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
 			],
 			link: [
-			{ rel: 'stylesheet', href: '/css/style_basket.css' }
+			// { rel: 'stylesheet', href: '/css/style_basket.css' }
 			]
 		},
 		components: {
@@ -29,7 +29,7 @@
 		},
 		computed: {
 			items () {
-				return this.$store.state.cart.data[0];
+				return this.$store.state.cart.data;
 			},
 
 			totalPrice(){

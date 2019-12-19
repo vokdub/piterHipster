@@ -21,7 +21,7 @@
 			],
 
 			link: [
-			{ rel: 'stylesheet', href: '/css/styleV2.css' }
+			// { rel: 'stylesheet', href: '/css/styleV2.css' }
 			]
 		},
 		components: {

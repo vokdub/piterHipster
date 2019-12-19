@@ -83,14 +83,15 @@
     display: flex;
     border: none;
     border-bottom: 1px solid black;
-    width: 150px;
+    width: 220px;
     height: 30px;
     text-decoration: none; }
   .finderAndBascet form .style-btn {
     background-image: url(../image/finder.png);
     height: 30px;
     width: 30px;
-    border: none; }
+    border: none;
+    margin-right: 5px; }
 
 .slide-win img {
   width: 30px;
@@ -383,24 +384,63 @@ article > h1 {
     padding-top: 3px; }
 
 @media screen and (min-width: 1025px) and (max-width: 4000px) {
-  .slide-win > img {
-    display: none !important; }
+  .merch .name_prod {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    text-align: left;
+    text-transform: uppercase; }
+
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; }
+
+  body .finderAndBascet form {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
+
+  .header {
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 30px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
+
+  .finderAndBascet form {
+    position: absolute;
+    left: 325px; }
+
+  .finderAndBascet form {
+    display: flex;
+    justify-content: flex-start; }
 
   .left-categories {
     position: fixed !important;
     left: 0;
+    top: 15px;
     width: 275px;
     height: 70%;
-    display: flex !important; } }
-@media screen and (min-width: 955px) and (max-width: 1024px) {
-  .slide-win > img {
-    display: none !important; }
-
-  .left-categories {
-    position: fixed !important;
-    left: 0;
-    width: 275px;
-    height: 70%;
+    padding-top: 100px;
+    z-index: -1;
     display: flex !important;
     justify-content: center;
     align-items: flex-start;
@@ -417,7 +457,7 @@ article > h1 {
       font-style: normal;
       font-size: 20px;
       font-weight: auto;
-      line-height: 19px;
+      line-height: 23px;
       text-align: center;
       color: #000000;
       text-decoration: none;
@@ -425,8 +465,88 @@ article > h1 {
       margin-bottom: 25px;
       margin-top: 25px; }
 
-  .header a {
-    font-size: 36px; } }
+  .slide-win > img {
+    display: none !important; } }
+@media screen and (min-width: 955px) and (max-width: 1024px) {
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
+
+  .header {
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 30px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
+
+  .finderAndBascet form {
+    position: absolute;
+    left: 325px; }
+
+  .finderAndBascet form {
+    display: flex;
+    justify-content: flex-start; }
+
+  .slide-win > img {
+    display: none !important; }
+
+  .left-categories {
+    position: fixed !important;
+    left: 0;
+    top: 15px;
+    width: 275px;
+    height: 70%;
+    padding-top: 100px;
+    z-index: -1;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    border-right: 1px darkgrey solid; }
+
+  .fixed div {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .fixed div a {
+      font-family: Roboto;
+      font-style: normal;
+      font-size: 20px;
+      font-weight: auto;
+      line-height: 23px;
+      text-align: center;
+      color: #000000;
+      text-decoration: none;
+      /* identical to box height */
+      margin-bottom: 25px;
+      margin-top: 25px; }
+
+  .merch .name_prod {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    text-align: left;
+    text-transform: uppercase; }
+
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; } }
 @media screen and (min-width: 501px) and (max-width: 954px) {
   article > .name {
     font-family: Robotolight;

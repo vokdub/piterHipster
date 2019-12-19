@@ -2,13 +2,13 @@
   <div>
     <header class="header">
       <div class="slide-win">
-        <img src="image/Burger.png">
+        <img src="/image/Burger.png">
       </div>
       <div class="header__logo logo">
-        <img src="image/photo_2019-10-30_20-50-35.jpg">
+        <img src="/image/photo_2019-10-30_20-50-35.jpg">
         <nuxt-link to="/" class="">
           <span>PITER</span><span>HIPSTER</span>
-        </nuxt-link>  
+        </nuxt-link>
       </div>
       <div class="finderAndBascet">
         <form action="#" method="get">
@@ -20,14 +20,14 @@
         </nuxt-link>
       </div>
     </header>
-
+    
     <nuxt />
 
     <footer class="bottom">
       <div class="feedback feedbackall"></div>
       <section class="feedback__form feedbackall">
         <h2>ОБРАТНЫЙ ЗВОНОК</h2>
-        <img class="close" src="image/close-icon.png">
+        <img class="close" src="/image/close-icon.png">
         <form action="#" method="post">
           <label>КАК ВАС ЗОВУТ?<input type="text" name="name" id="name"></label>
           <label>ВАШ ТЕЛЕФОН<input type="text" name="tel" id="tel"></label>
@@ -57,15 +57,15 @@
         <div class="bottom__logo ">
 
           <div class="bottom__tel">
-            <img src="image/logo%20(1).png">
+            <img src="/image/logo%20(1).png">
             <a href="tel:+79502535013">+7 950 253 50 13</a>
           </div>
 
           <div class="contact-us">
             <div>
-              <img src="image/2%201.png">
-              <img class="insta" src="image/insta%201.png">
-              <img src="image/1%20992.png">
+              <img src="/image/2%201.png">
+              <img class="insta" src="/image/insta%201.png">
+              <img src="/image/1%20992.png">
             </div>
             <button class="java" href="#call">Перезвоните мне</button>
           </div>

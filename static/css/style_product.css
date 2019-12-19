@@ -79,14 +79,15 @@
     display: flex;
     border: none;
     border-bottom: 1px solid black;
-    width: 150px;
+    width: 220px;
     height: 30px;
     text-decoration: none; }
   .finderAndBascet form .style-btn {
     background-image: url(../image/finder.png);
     height: 30px;
     width: 30px;
-    border: none; }
+    border: none;
+    margin-right: 5px; }
 
 .feedback {
   position: fixed;
@@ -670,20 +671,43 @@ main {
   .X {
     display: none; }
 
-  .header .header__logo {
-    margin-right: -210px; }
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; }
+
+  body .finderAndBascet form {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
 
   .header {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 26px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
 
   .finderAndBascet form {
-    display: flex; }
-
-  .header .header__logo {
-    margin-right: -210px; }
+    position: absolute;
+    left: 310px; }
 
   .finderAndBascet form {
-    display: flex; }
+    display: flex;
+    justify-content: flex-start; }
 
   main {
     width: 80%;
@@ -870,18 +894,21 @@ main {
     display: none !important; }
 
   .left-categories {
-    position: fixed;
+    position: fixed !important;
     left: 0;
+    top: 15px;
     width: 260px;
     height: 70%;
-    display: flex;
+    padding-top: 100px;
+    z-index: -1;
+    display: flex !important;
     justify-content: center;
     align-items: flex-start;
     background-color: white;
     border-right: 1px darkgrey solid; }
 
   .fixed div {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
@@ -890,7 +917,7 @@ main {
       font-style: normal;
       font-size: 20px;
       font-weight: auto;
-      line-height: 19px;
+      line-height: 23px;
       text-align: center;
       color: #000000;
       text-decoration: none;
@@ -901,20 +928,43 @@ main {
   .X {
     display: none; }
 
-  .header .header__logo {
-    margin-right: -210px; }
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; }
+
+  body .finderAndBascet form {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
 
   .header {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 30px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
 
   .finderAndBascet form {
-    display: flex; }
-
-  .header .header__logo {
-    margin-right: -210px; }
+    position: absolute;
+    left: 330px; }
 
   .finderAndBascet form {
-    display: flex; }
+    display: flex;
+    justify-content: flex-start; }
 
   main {
     width: 80%;
@@ -1100,18 +1150,21 @@ main {
     display: none !important; }
 
   .left-categories {
-    position: fixed;
+    position: fixed !important;
     left: 0;
+    top: 15px;
     width: 280px;
     height: 70%;
-    display: flex;
+    padding-top: 100px;
+    z-index: -1;
+    display: flex !important;
     justify-content: center;
     align-items: flex-start;
     background-color: white;
     border-right: 1px darkgrey solid; }
 
   .fixed div {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
@@ -1120,7 +1173,7 @@ main {
       font-style: normal;
       font-size: 20px;
       font-weight: auto;
-      line-height: 19px;
+      line-height: 23px;
       text-align: center;
       color: #000000;
       text-decoration: none;
@@ -1131,20 +1184,43 @@ main {
   .X {
     display: none; }
 
-  .header .header__logo {
-    margin-right: -210px; }
+  .feedback__form {
+    width: 360px;
+    height: 260px;
+    left: 50%;
+    margin-left: -12.5%; }
+
+  body .finderAndBascet form {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+
+  article > h1 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 40px; }
 
   .header {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    height: 100px;
+    border-bottom: none;
+    position: relative; }
+    .header a {
+      font-size: 30px;
+      line-height: 35px; }
+
+  .header__logo {
+    position: absolute;
+    left: 10px; }
+    .header__logo img {
+      margin-right: 10px; }
 
   .finderAndBascet form {
-    display: flex; }
-
-  .header .header__logo {
-    margin-right: -210px; }
+    position: absolute;
+    left: 325px; }
 
   .finderAndBascet form {
-    display: flex; }
+    display: flex;
+    justify-content: flex-start; }
 
   main {
     width: 80%;
@@ -1330,18 +1406,21 @@ main {
     display: none !important; }
 
   .left-categories {
-    position: fixed;
+    position: fixed !important;
     left: 0;
+    top: 15px;
     width: 275px;
     height: 70%;
-    display: flex;
+    padding-top: 100px;
+    z-index: -1;
+    display: flex !important;
     justify-content: center;
     align-items: flex-start;
     background-color: white;
     border-right: 1px darkgrey solid; }
 
   .fixed div {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
@@ -1350,7 +1429,7 @@ main {
       font-style: normal;
       font-size: 20px;
       font-weight: auto;
-      line-height: 19px;
+      line-height: 23px;
       text-align: center;
       color: #000000;
       text-decoration: none;

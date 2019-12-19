@@ -1,6 +1,6 @@
 <template>
 	<div>
-		{{product[0].title}}
+		<!-- {{product[0].title}} -->
 		<NavAndProduct 
 		v-on:myEvent="addToCart($event)"
 		:product = "product"></NavAndProduct>
@@ -23,7 +23,7 @@
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
 			],
 			link: [
-			{ rel: 'stylesheet', href: '/css/style_product.css' }
+			// { rel: 'stylesheet', href: '/css/style_product.css' }
 			]
 		},
 		components: {

@@ -387,15 +387,15 @@ $sizeButtonFinish: 180px;
 }
 @font-face {
     font-family: Roboto; /* Гарнитура шрифта */
-    src: url(../fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Robotobold; /* Гарнитура шрифта */
-    src: url(../fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Robotomedium; /* Гарнитура шрифта */
-    src: url(../fonts/Robotomedium.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Robotomedium.ttf); /* Путь к файлу со шрифтом */
    }
 @mixin font($size,$weight,$height,$color: #000000){
         font-family: $fontStyle;
@@ -478,6 +478,54 @@ article{
         justify-content: center;
         align-items: center;
         width: 100%;
+    p{
+        @include font(14px,normal,16px);
+        text-align: left;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    div{
+        width: 80%;
+        .order_text{
+            @include font(12px,normal,14px);
+            text-align: left;
+        }
+        p{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+            position: relative;
+            @include font(14px,normal,16px);
+            text-align: left;
+            .radio{
+                width: 14px;
+                height: 14px;
+                margin-right: 5px;
+                margin-left: -15px;
+            }
+            span{
+                position: absolute;
+                right: 0;
+            }
+        }
+        .show_on_the_map{
+            background-color: #00C21F;
+            width: 110px;
+            height: 20px;
+            @include font(11px,normal,13px);
+            color: white;
+            border: 0;
+            margin-bottom: 10px;
+        }
+        .not_margin{
+                margin-bottom: 5px;
+            }
+        .small{
+            @include font(10px,normal,12px);
+            text-align: left;
+        }
+    }
         label{
             width: 100%;
             display: flex;
@@ -497,10 +545,12 @@ article{
                 margin-bottom: 10px;
                 margin-top: 2px;
             }
+            
             .comment{
                 height: 75px;
             }
         }
+    
         .style-btn1{
             display: block;
             background: black;
@@ -593,7 +643,7 @@ my_choise{
         }
 }
 //******************************************
-@media screen and (min-width:801px) and (max-width: 1240px){
+@media screen and (min-width:1375px) and (max-width: 4500px){
     $leftCategoryBlock: 225px;
      .main .left-categories{
         width: $leftCategoryBlock;
@@ -610,6 +660,58 @@ my_choise{
         display: flex;
     }
 }
+    article{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width: 1374px){
+    $leftCategoryBlock: 225px;
+     .main .left-categories{
+        width: $leftCategoryBlock;
+        div a{
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    .header .header__logo{
+        margin-right: -210px;
+    }
+.finderAndBascet{
+    form{
+        display: flex;
+    }
+}
+    article{
+        width: 500px;
+        
+    }
+}
+
+@media screen and (min-width:801px) and (max-width: 1024px){
+    $leftCategoryBlock: 225px;
+     .main .left-categories{
+        width: $leftCategoryBlock;
+        div a{
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    .header .header__logo{
+        margin-right: -210px;
+    }
+.finderAndBascet{
+    form{
+        display: flex;
+    }
+}
+    article{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (min-width:501px) and (max-width: 800px){

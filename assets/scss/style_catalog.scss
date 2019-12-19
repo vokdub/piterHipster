@@ -36,15 +36,15 @@ $sizeSmallsPic:10px;///!!!!
 }
 @font-face {
     font-family: Roboto; /* Гарнитура шрифта */
-    src: url(../fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Roboto.ttf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Robotobold; /* Гарнитура шрифта */
-    src: url(../fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Robotobold.ttf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Robotolight; /* Гарнитура шрифта */
-    src: url(../fonts/Robotolight.ttf); /* Путь к файлу со шрифтом */
+    src: url(~assets/fonts/Robotolight.ttf); /* Путь к файлу со шрифтом */
    }
 
 @mixin font($size,$weight,$height,$color: #000000){
@@ -130,31 +130,64 @@ article > h1{
 //******************************************
 @media screen and (min-width: 1025px) and (max-width: 4000px){
     $leftCategoryBlock: 275px;
-    .slide-win >img{
-            display: none !important;
-        }
-    .left-categories{
-        position: fixed!important;
-        left: 0;
-        width: $leftCategoryBlock;
-        height: 70%;
-        display: flex!important;
+    .merch .name_prod{
+        @include font(14px,normal,16px);
+        text-align: left;
+        text-transform: uppercase;
     }
-}
-@media screen and (min-width: 955px) and (max-width: 1024px){
-    $firstSliderSize: 280px;
-    $leftCategoryBlock: 275px;
-    $space-between-products1: 20px; ///????
-    $bottom-space-right:auto; //!!
-    $bottom-space-left:auto;
-    .slide-win >img{
-            display: none !important;
+    .feedback__form{
+        width: 360px;
+        height: 260px;
+        left: 50%;
+        margin-left: -12.5%;
+    }
+    body .finderAndBascet form{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    article > h1{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+    .header{
+        margin-bottom: 20px;
+        height: 100px;
+        border-bottom: none;
+        position: relative;
+        a{
+            font-size: 30px;
+            line-height: 35px;
         }
+    }
+    .header__logo{
+        position: absolute;
+        left: 10px;
+        img{
+            margin-right: 10px;
+        }
+    }
+    .finderAndBascet{
+        form{
+            position: absolute;
+            left: $leftCategoryBlock + 50px;
+        }
+    }
+    .finderAndBascet{
+        form{
+        display: flex;
+        justify-content: flex-start;
+        }
+    }
+    
     .left-categories{
         position: fixed!important;
         left: 0;
+        top: 15px;
         width: $leftCategoryBlock;
         height: 70%;
+        padding-top: 100px;
+        z-index: -1;
         display: flex!important;
         justify-content: center;
         align-items: flex-start;
@@ -167,17 +200,98 @@ article > h1{
         align-items: center;
         justify-content: center;
         a{
-            @include font(20px,auto,19px);
+            @include font(20px,auto,23px);
             text-decoration: none;
             /* identical to box height */
             margin-bottom: $hight-left-catigory + 10px;
             margin-top: $hight-left-catigory + 10px;
         }
     }
-    .header {
-            a{
-            font-size: 36px;
+    
+    .slide-win >img{
+            display: none !important;
         }
+}
+@media screen and (min-width: 955px) and (max-width: 1024px){
+    $firstSliderSize: 280px;
+    $leftCategoryBlock: 275px;
+    $space-between-products1: 20px; ///????
+    $bottom-space-right:auto; //!!
+    $bottom-space-left:auto;
+    article > h1{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+    .header{
+        margin-bottom: 20px;
+        height: 100px;
+        border-bottom: none;
+        position: relative;
+        a{
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+    .header__logo{
+        position: absolute;
+        left: 10px;
+        img{
+            margin-right: 10px;
+        }
+    }
+    .finderAndBascet{
+        form{
+            position: absolute;
+            left: $leftCategoryBlock + 50px;
+        }
+    }
+    .finderAndBascet{
+        form{
+        display: flex;
+        justify-content: flex-start;
+        }
+    }
+    .slide-win >img{
+            display: none !important;
+        }
+    .left-categories{
+        position: fixed!important;
+        left: 0;
+        top: 15px;
+        width: $leftCategoryBlock;
+        height: 70%;
+        padding-top: 100px;
+        z-index: -1;
+        display: flex!important;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: white;
+        border-right: 1px darkgrey solid;
+    }
+    .fixed div{
+        display: flex!important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        a{
+            @include font(20px,auto,23px);
+            text-decoration: none;
+            /* identical to box height */
+            margin-bottom: $hight-left-catigory + 10px;
+            margin-top: $hight-left-catigory + 10px;
+        }
+    }
+    .merch .name_prod{
+        @include font(14px,normal,16px);
+        text-align: left;
+        text-transform: uppercase;
+    }
+    .feedback__form{
+        width: 360px;
+        height: 260px;
+        left: 50%;
+        margin-left: -12.5%;
     }
     
 }

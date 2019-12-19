@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<div v-for="item in products">
+		<!-- <div v-for="item in products">
 			{{item.title}}
-		</div>
+		</div> -->
 		<NavAndCatalog></NavAndCatalog>	
 	</div>
 </template>
@@ -22,7 +22,7 @@
 			],
 
 			link: [
-			{ rel: 'stylesheet', href: '/css/style_catalog.css' }
+			// { rel: 'stylesheet', href: '/css/style_catalog.css' }
 			]
 		},
 		components: {

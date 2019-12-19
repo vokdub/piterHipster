@@ -12,7 +12,7 @@ export default {
     { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],    
     script: [
-    { src: '/js/script.js' }
+    { src: 'js/script.js' }
     ],
     link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -26,6 +26,8 @@ export default {
   ** Global CSS
   */
   css: [
+  { src: '~assets/scss/index.scss', lang: 'sass' },
+    // CSS-файл в проекте
   ],
   /*
   ** Plugins to load before mounting the App
@@ -49,6 +51,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['axios'],
+  
     extend (config, ctx) {
     }
   }

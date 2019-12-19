@@ -31,7 +31,7 @@
 				</nav>
 			</div>
 		</article> 
-		<main>
+		<main v-if="product[0]">
 			<article class="product__imgs">
 				<div class="product__main-photo">
 					<div class="product__slider" id="slider" ontouchstart="startSwipe(event)" ontouchmove="moveSwipe(event)" ontouchend="endSwipe(event)">
